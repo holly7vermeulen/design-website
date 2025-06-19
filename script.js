@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
       clickCount++;
       if (clickCount === 10) {
         modal.style.display = 'flex';
+        alert("Epilepsy warning fallback");
         clickCount = 0;
       }
     });
