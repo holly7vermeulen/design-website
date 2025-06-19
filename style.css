@@ -29,6 +29,17 @@ body {
   animation: fadeIn 2s ease-in-out forwards;
 }
 
+.logo a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo a:visited,
+.logo a:active,
+.logo a:focus {
+  color: white;
+}
+
 .logo {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.5rem;
