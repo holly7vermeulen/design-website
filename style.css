@@ -187,9 +187,12 @@ footer {
 
   .nav-links.open {
     transform: translateX(0);
+    z-index: 999;
   }
 
   .menu-toggle {
     display: block;
+    cursor: pointer;
+    z-index: 1000;
   }
 }
