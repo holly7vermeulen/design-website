@@ -246,3 +246,51 @@ footer{
   .nav-links li{margin-bottom:1rem;}
   .nav-links li:last-child{margin-bottom:0;}
 }
+
+/* ─────────────────────────────
+   Epilepsy-warning modal (centered)
+   ───────────────────────────── */
+   #epilepsy-modal{
+    display:none;
+    position:fixed; inset:0;
+    background:rgba(0,0,0,.9);
+    justify-content:center; align-items:center;
+    z-index:11000;               /* above everything */
+    color:#fff; text-align:center;
+  }
+  #epilepsy-modal .modal-content{
+    max-width:420px; padding:2rem 2.2rem;
+    background:#111; border-radius:12px;
+    box-shadow:0 0 25px rgba(0,0,0,.7);
+  }
+  #epilepsy-modal .modal-actions{
+    margin-top:1.6rem;
+    display:flex; gap:1rem; justify-content:center;
+  }
+  #epilepsy-modal button{
+    padding:.65rem 1.3rem; border:none; border-radius:8px;
+    cursor:pointer; font-weight:600;
+  }
+  #modal-continue{background:#0f0; color:#000;}
+  #modal-cancel  {background:#f00; color:#fff;}
+  
+  /* ─────────────────────────────
+     Rave flash overlay (slower, on top)
+     ───────────────────────────── */
+  @keyframes raveFlash{
+    0%   { background:#ff0048; }
+    25%  { background:#00e0ff; }
+    50%  { background:#fffd38; }
+    75%  { background:#912dff; }
+    100% { background:#ff0048; }
+  }
+  
+  /* body gets .rave, then a full-viewport pseudo-element flashes */
+  body.rave::after{
+    content:'';
+    position:fixed; inset:0;
+    animation:raveFlash 0.4s steps(1) infinite; /* slower flashes */
+    pointer-events:none;
+    z-index:10999; /* just below the modal */
+  }
+  
