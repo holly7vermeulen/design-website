@@ -1,6 +1,6 @@
 :root {
   --blue: #0057b4;
-  --orange: #ff5722;
+  --orange: #ff0000;
   --bg-dark: #000000;
   --text-light: #ffffff;
 }
@@ -26,7 +26,7 @@ body {
   align-items: center;
   padding: 1rem 2rem;
   background: linear-gradient(to right, #003366, #3399ff, #003366);
-  animation: fadeIn 1s ease-in;
+  animation: fadeIn 2s ease-in-out forwards;
 }
 
 .logo {
